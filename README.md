@@ -67,14 +67,6 @@ php artisan storage:link
 php artisan migrate
 ```
 
-## ファクトリーを用いたサンプルの生産
-
-apacheのbashにて以下を実行
-
-```bash
-php artisan migrate:fresh --seed
-```
-
 # Ports
 
 |  元Port  |  割当Port  |
