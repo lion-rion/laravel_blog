@@ -106,8 +106,6 @@ validate([
 <img height="30" src="https://img.shields.io/badge/-Apache%202.4.54-black.svg?logo=apache&style=plastic">
 </div>
 
-環境にはdockerを採用しており，環境構築もdocker-composeを用いて行っている
-
 ディレクトリ構成図
 
 ```
