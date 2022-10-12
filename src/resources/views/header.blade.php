@@ -9,7 +9,7 @@
             </a>
         </div>
         <div id="header-end" class="flex">
-            <a class="header_search_button_wrap" href="/search">
+            <a class="header_search_button_wrap" href="{{route('search')}}}}">
                 <i class="fa-solid fa-magnifying-glass header_search_button"></i>
             </a>
             @guest
@@ -18,12 +18,10 @@
             @endguest
             @auth
                 <div id="user_profile_img_wrap" class="user_profile_img_wrap">
-                    <!--<img class="user_profile_img" src="{{ asset('image/' . Auth::user()->profile_image) }}" alt="プロフィール画像">-->
+                    <i class=" user_profile_img fa-solid fa-circle-user header_login_button"></i>
                     <div id="profile_menu_wrap">
                         <div class="profile_menu">
                             <!--<a href="/profile/{{ Auth::user()->id }}">マイページ</a>-->
-                            <a href="">保存リスト</a>
-                            <a href="">設定</a>
                             <div class="profile_menu_under_bar"></div>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -47,7 +45,7 @@
             <a class="home_menu_nav_item" href="/">ホーム</a>
         </div>
         <div class="">
-            <a class="home_menu_nav_item" href="/search"><i class="fa-solid fa-magnifying-glass fa_p_margin"></i>検索</a>
+            <a class="home_menu_nav_item" href="{{route('search')}}"><i class="fa-solid fa-magnifying-glass fa_p_margin"></i>検索</a>
         </div>
         <div class="">
             <a class="home_menu_nav_item_last" href="{{ route('create') }}"><i

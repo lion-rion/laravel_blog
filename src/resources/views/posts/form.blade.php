@@ -30,8 +30,7 @@
                 <textarea
                 style="height: 300px"
                 class="form_input_long h-96"
-                name="title"
-                placeholder="Next.jsを用いれば簡単なページングを実現できます"
+                name="body"
                 value="">{{ old('body')}}
                 </textarea>
         </div>

@@ -29,20 +29,19 @@
                                             src="{{ asset('image/' . $post->user->profile_image) }}" alt="">
                                         <!--プロフ画像追加-->
                                     </a> --}}
-                                   
-                                    <p class="user_id"><span>@</span>{{ $post->user->name }}
-                                    </p>
+                                    <a href="/profile/{{ $post->user->id }}">
+                                        <p class="user_id"><span>@</span>{{ $post->user->name }}
+                                    </a></p>
                                 </div>
-                                
+                                <div class="report_wrap tententen_wrap">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
                                 <div id="report_menu_wrap">
                                     <div class="report_menu">
                                         @auth
-                                            <div class="report_wrap tententen_wrap">
-                                                <i class="fa-solid fa-ellipsis"></i>
-                                            </div>
                                             @if (Auth::user()->id === $post->user_id)
                                                 <button type="button"
-                                                    onclick="location.href='/post/edit/{{ $post->id }}'">編集</button>
+                                                    onclick="location.href='/posts/edit/{{ $post->id }}'">編集</button>
                                                 <div class="profile_menu_under_bar"></div>
                                                 <form method="POST" action="{{ route('delete', $post->id) }}"
                                                     onSubmit="return checkDelete()">
@@ -53,6 +52,9 @@
                                                 <a href="/report">報告</a>
                                             @endif
                                         @endauth
+                                        @guest
+                                            <a href="/report">報告</a>
+                                        @endguest
                                         <!--<div class="profile_menu_under_bar"></div>アンダーバー-->
 
                                     </div>
@@ -75,9 +77,10 @@
                             <div>
                                 <h3 class="box">{{ $post->body}}</h3>
                             </div>
+                            <br><br><br>
                         </section>
                 </section>
-                <section class="post_section_wrap">
+                {{-- <section class="post_section_wrap">
                     <div>
                         <h2 class="post_comment_h2">コメント</h2>
                     </div>
@@ -126,7 +129,7 @@
                                 <div class="comment_wrap">
                                     <span>{{ $comment->comment }}</span>
                                 </div>
-                            @endforeach --}}
+                            @endforeach
                         </div>
                     </div>
                     <!--ログインしてコメントしよう画像を追加する予定-->
@@ -152,7 +155,7 @@
                             </form>
                         </div>
                     @endauth
-                </section>
+                </section> --}}
             <script>
                 function checkDelete() {
                     if (window.confirm('この記事を削除してよろしいですか？削除した投稿は復旧できません。')) {
