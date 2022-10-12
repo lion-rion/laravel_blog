@@ -76,19 +76,10 @@ class PostController extends Controller
      //ブログ削除フォームを表示する 引数はid
      public function exeDelete($id){
         $post = Post::find($id);
-        if(empty($id)){
-            \Session::flash('err_msg', 'データがありません。');
-            return redirect(route('posts'));
-        }
-        try {
-            //ブログ削除
-            Post::destroy($id);
-        }catch(\Throwable $e){
-            abort(500);
-        }
-        \Session::flash('err_msg', 'ブログを削除しました');
-        return redirect(route('posts')); 
-        }
-
-    
+        Post::destroy($id);
+        return redirect('/'); 
+    }
+    public function showComing(){
+        return view('posts.coming');
+    }
 }
