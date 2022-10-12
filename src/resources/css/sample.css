@@ -185,7 +185,6 @@
         display: inline-block;
         width: 2px;
         height: 18px;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         background-color: #f2f2f2;
         border-radius: 2px;
@@ -465,7 +464,6 @@
         border-radius: 5px;
         background-color: #eb6100;
         border-bottom: 5px solid #b84c00;
-        -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     }
     .combo_button:hover {
@@ -523,7 +521,8 @@
         background-image: none;
         box-shadow: none;
         -webkit-appearance: none;
-        appearance: none;
+        -moz-appearance: none;
+             appearance: none;
     }
     .cp_ipselect select::-ms-expand {
         display: none;
@@ -982,3 +981,989 @@ html {
     color: #FA5C65;
     margin: 0.3rem;
 }
+
+@media only screen and (min-width: 1000px) {
+   
+
+    /*---------margin専用css---------*/
+
+    .post_info {
+        margin-bottom: 8px;
+    }
+    /*---------margin専用css終了---------*/
+    .box{
+        inline-size: 340px;
+        overflow-wrap: break-word;
+    }
+    /*-------------並び替えの設定css----------------*/
+
+    .flex {
+        display: flex;
+    }
+
+    .flex_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flex_space_between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*-------------並び替えの設定css終了-------------*/
+
+    /*---文字に関する設定------*/
+    .normal_p {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    p {
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    /*投稿設定*/
+    .post_info_item {
+        margin-right: 10px;
+    }
+
+    .fa-angle-right-blue {
+        color: #0066cc;
+        font-size: 14px;
+    }
+
+    .notice_p {
+        padding-left: 10px;
+        color: #0066cc;
+        line-height: 22px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .notice_wrap {
+        padding: 10px;
+    }
+
+    .notice_container {
+        font-weight: 700;
+        font-size: 12px;
+        height: auto;
+        overflow: hidden;
+        font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+        background-color: #fff;
+        border-top: 1px solid #d9dde3;
+        border-bottom: 1px solid #d9dde3;
+    }
+    /*全体設定*/
+    img {
+        width: 100%;
+    }
+
+    /*検索設定*/
+    .search_window_wrap {
+        background-color: #fff;
+    }
+
+    .search_window {
+        padding: 15px;
+    }
+
+    /*-----------------ヘッダー設定-------------------*/
+
+    header {
+        margin-bottom: 10px;
+        background: #37474f;
+    }
+    /*終了*/
+
+    .main-header {
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .header-icon {
+        width: 35px;
+        border-radius: 3px;
+    }
+
+    #header-start {
+        display: flex;
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    #header-end {
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #title {
+        margin-left: 10px;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.4;
+        text-shadow: 1px 1px 3px #000;
+        font-weight: 700;
+    }
+
+    /*--------------ナビメニュー---------------------*/
+
+    .main_header_wrap {
+        background: #37474f;
+    }
+
+    .home_menu {
+        background: #fff;
+        box-shadow: 0 1px 1px 0 #e2e2e2, 0 1px 1px 0 #e2e2e2;
+    }
+
+    /*お知らせ設定*/
+
+    .home_menu_nav {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .home_menu_nav_item {
+        position: relative;
+        display: inline-block;
+        font-family: system-ui, BlinkMacSystemFont, -apple-system-subset,
+            Hiragino Kaku Gothic ProN, sans-serif !important;
+        width: 33vw;
+        padding: 13px 0;
+        text-align: center;
+        color: #111;
+        font-size: 15px;
+    }
+
+    /*お知らせ設定終了*/
+
+    .fa_p_margin {
+        margin-right: 3px;
+    }
+
+    .home_menu_nav_item_last {
+        position: relative;
+        display: inline-block;
+        font-family: system-ui, BlinkMacSystemFont, -apple-system-subset,
+            Hiragino Kaku Gothic ProN, sans-serif !important;
+        width: 33vw;
+        padding: 13px 0;
+        font-weight: 600;
+        text-align: center;
+        color: #1681b2;
+        font-size: 15px;
+    }
+
+    .home_menu_nav_item::before {
+        content: "";
+        position: absolute;
+        left: 100%;
+        bottom: 16px;
+        display: inline-block;
+        width: 2px;
+        height: 18px;
+        transform: translateX(-50%);
+        background-color: #f2f2f2;
+        border-radius: 2px;
+    }
+
+    /*--------------全体設定-----------------*/
+    .main_content_wrap {
+        margin: 0 auto;
+        max-width: 100vw;
+        display: flex;
+    }
+
+    body {
+        font-family: Hiragino Kaku Gothic Pro, "ヒラギノ角ゴ Pro W3", Meiryo,
+            "メイリオ", Meiryo, "メイリオ", Osaka, MS PGothic, arial, helvetica,
+            sans-serif;
+        line-height: 1.6;
+        font-size: 13px;
+        background: #f2f2f2;
+    }
+
+    /*-----------投稿カード設定-------------*/
+
+    .username_data {
+        display: flex;
+        margin-left: 8px;
+    }
+
+    .created_data_p {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        margin-left: 4px;
+    }
+
+    .post_title_h2 {
+        overflow: hidden;
+        font-size: 17px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.87);
+        line-height: 1.4;
+    }
+
+    /*------------レシピ設定------------------*/
+
+    .combo_content {
+        background-color: #f7f7f8;
+        border-radius: 5px;
+    }
+
+    .combo_content_p {
+        /*領域を超えて表示した場合に末尾を(・・・)に変換する設定*/
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    /*--------フォーム設定---------*/
+
+    .p_arange {
+        padding-top: 4px;
+    }
+
+    .post_form_upper_p {
+        margin-bottom: 5px;
+    }
+
+    .post_section_wrap {
+        background-color: #fff;
+        margin-top: 10px;
+        margin-right: 100px;
+        padding: 15px;
+        box-sizing: border-box;
+        box-shadow: 0 1px 1px 0 #e2e2e2, 0 1px 1px 0 #e2e2e2;
+    }
+
+    .post_form_h2 {
+        color: #333;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 1px solid #ebebeb;
+        line-height: 1;
+    }
+
+    .post_form_h2::before {
+        display: inline-block;
+        width: 4px;
+        height: 13px;
+        margin-right: 12px;
+        background-color: #ff9c1a;
+        border-radius: 2px;
+        content: "";
+    }
+
+    .post_form_char {
+        margin: 20px 10px 10px 10px;
+    }
+
+    .post_select_form {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0px 20px 0px;
+    }
+
+    /*レシピ欄は下にボタンが配置されるのでマージンを0にする*/
+    .post_form_combo {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*投稿ボタン*/
+    .submit_button {
+        margin: 5px auto 15px;
+        color: #ffffff;
+        background-color: #29a1c6;
+        border: 1px solid #29a1c6;
+        border-radius: 2px;
+        display: block;
+        padding: 7px;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .edit_button {
+        margin: 5px auto 15px;
+        color: #ffffff;
+        background-color: #29a1c6;
+        border: 1px solid #29a1c6;
+        border-radius: 2px;
+        display: block;
+        padding: 7px;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .delete_button {
+        margin: 5px auto 15px;
+        color: #ffffff;
+        background-color: #29a1c6;
+        border: 1px solid #29a1c6;
+        border-radius: 2px;
+        display: block;
+        padding: 7px;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    /*------------タグ設定------------------*/
+    .post_tag_container {
+        display: flex;
+    }
+
+    .tag_flex_wrap {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 30px 10px 10px;
+    }
+
+    /*--------タグ入力フォーム-----------*/
+    .search_button {
+        margin: 0 auto !important;
+    }
+
+    .tag_1 {
+        margin: 0 5px 5px 0;
+        width: 44vw;
+        height: 30px;
+        box-sizing: border-box;
+        padding: 0.5em;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .damage {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .post_detail_sub {
+        font-size: 13px;
+    }
+
+    #damage_textarea {
+        margin: -5px 10px 0 10px;
+        width: 80px;
+        height: 29px;
+    }
+
+    .post_tag_wrap {
+        margin-right: 7px;
+    }
+
+    .post_tag {
+        color: #146fab;
+        font-size: 12px;
+        background-color: #e1ecf4;
+        border-radius: 5px;
+        padding: 1px 3px 0px 3px;
+    }
+
+    .fa-tags {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 2px 7px 0 0;
+    }
+
+    /*------------フッター設定-------------*/
+    footer {
+        background: rgb(68, 68, 68);
+        text-align: center;
+        padding: 26px;
+        width: 100vw;
+    }
+
+    footer p {
+        color: white;
+        font-size: 0.8rem;
+    }
+    /*--------------テキストエリア-----------------*/
+    textarea {
+        padding: 3px !important;
+        resize: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 3px !important;
+    }
+
+    .comment_textarea {
+        height: 100px;
+        width: 90vw;
+        padding: 3px !important;
+        resize: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+
+    #advise {
+        width: 92vw;
+        height: 100px;
+    }
+
+    .form_input_long {
+        width: 92vw;
+        height: 30px;
+        box-sizing: border-box;
+        margin: 3px 0;
+        padding: 0.8em;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    #combo_content {
+        /*inputの形を変更*/
+        width: 92vw;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 0.8em;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /*--------------ボタン設定--------------------*/
+    .combo_button_wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .combo_button {
+        padding: 10px;
+        margin: 3px 5px;
+        text-align: center;
+        width: 70px;
+        color: #fff;
+        border-radius: 5px;
+        background-color: #eb6100;
+        border-bottom: 5px solid #b84c00;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    }
+    .combo_button:hover {
+        margin-top: 3px;
+        color: #fff;
+        background: #f56500;
+        border-bottom: 2px solid #b84c00;
+    }
+
+    .search_button_container {
+        justify-content: center;
+    }
+
+    .search_button_wrap {
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px !important;
+    }
+
+    .combo_button_display {
+        cursor: pointer;
+        padding: 5px 5px 5px 5px;
+        background: #ffffff;
+        color: #242323;
+        font-size: 13px;
+    }
+
+    /*input設定*/
+    .normal_input {
+        width: 200px;
+        height: 30px;
+        box-sizing: border-box;
+        padding: 0.5em;
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /*----------------セレクトボックス------------------------*/
+
+    .cp_ipselect {
+        overflow: hidden;
+        width: 200px;
+        margin: -3px 0px 0 0px;
+        text-align: center;
+    }
+    .cp_ipselect select {
+        width: 200px;
+        padding-right: 1em;
+        cursor: pointer;
+        text-indent: 0.01px;
+        text-overflow: ellipsis;
+        border: none;
+        outline: none;
+        background: transparent;
+        background-image: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+             appearance: none;
+    }
+    .cp_ipselect select::-ms-expand {
+        display: none;
+    }
+    .cp_ipselect.cp_sl01 {
+        position: relative;
+        border: 1px solid #bbbbbb;
+        border-radius: 2px;
+        background: #ffffff;
+    }
+    .cp_ipselect.cp_sl01::before {
+        position: absolute;
+        top: 0.8em;
+        right: 0.9em;
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: "";
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid #666666;
+        pointer-events: none;
+    }
+    .cp_ipselect.cp_sl01 select {
+        padding: 8px 38px 8px 8px;
+        color: #666666;
+    }
+
+    /*-----------詳細画面-----------------*/
+    .created_post {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 13px;
+    }
+
+    .post_detail_section {
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .created_at_p {
+        margin-right: 20px;
+    }
+
+    .post_detail_h1 {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.4;
+        padding: 15px 0 5px 0px;
+    }
+
+    .post_detail_h2 {
+        color: #333;
+        padding: 40px 0px 5px 0px;
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 1px solid #ebebeb;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .post_detail_h2::before {
+        display: inline-block;
+        width: 4px;
+        height: 16px;
+        margin-right: 12px;
+        /*カラーは2個目のクラスに付属*/
+        border-radius: 2px;
+        content: "";
+    }
+
+    .combo_detail_recipe {
+        padding: 10px 10px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .detail_recipe_h2::before {
+        background-color: #23ca69;
+    }
+
+    .detail_advise_h2::before {
+        background-color: #c77517;
+    }
+    .detail_twitter_h2::before {
+        background-color: #179ec7;
+    }
+
+    /*-------コメラン設定---------*/
+
+    .user_id {
+        color: #0066cc;
+    }
+
+    .post_comment_h2 {
+        color: #333;
+        padding: 20px 0px 5px 0px;
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 1px solid #ebebeb;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .comment_wrap {
+        margin: 20px 0px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .guest_comment_form {
+        background-color: #000;
+    }
+
+    /*-------ユーザー設定--------*/
+    .header_search_button_wrap {
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+    .header_search_button {
+        padding: 10px;
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 700;
+        margin-right: 15px;
+    }
+
+    .header_login_button {
+        padding: 10px;
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
+    .user_image {
+        width: 24px;
+        height: 24px;
+        overflow: hidden;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 8px;
+    }
+
+    .user_profile_img {
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    #user_profile_img_wrap {
+        height: 50px;
+        width: 50px;
+    }
+
+    .profile_card {
+        text-align: center;
+        display: block;
+        margin: 10px 0px;
+    }
+
+    .profile_username {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 15px;
+    }
+
+    .profile_post_count {
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        width: 200px;
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .profile_img {
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+    }
+
+    .profile_section_wrap {
+        width: 95vw;
+        margin: 0 auto;
+        background-color: #fff;
+        margin-bottom: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .post_image_wrap {
+        box-shadow: 0 1px 1px 0 #e2e2e2, 0 1px 1px 0 #e2e2e2;
+    }
+
+    /*-------ページネーション設定----*/
+    .pagination {
+        display: flex;
+        justify-content: center;
+        padding: 20px 20px;
+    }
+
+    .pagination_p {
+        font-size: 14px;
+        padding: 0 30px;
+    }
+
+    .pagination_none_2 {
+        padding: 10px 15px 8px 20px;
+    }
+
+    .pagination_none_1 {
+        padding: 10px 20px 8px 15px;
+    }
+
+    .pagination_a {
+        padding: 10px 15px 8px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .pagination_button {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
+    }
+
+    .paginationWrap {
+        background: #fff;
+    }
+    /*-------検索ウィンドの設定----------*/
+
+    .search_window {
+        display: none;
+    }
+    /*ソートボタンの設定*/
+    .sort_form_wrap {
+        background-color: #fff;
+        margin-bottom: -10px;
+        padding-bottom: 5px;
+    }
+
+    .sort_button_container {
+        margin: 10px 15px 10px 15px;
+        padding: 10px 10px 10px 0px;
+        border-bottom: 1px solid #d9dde3;
+    }
+
+    .sort_button_wrap {
+        margin-right: 10px;
+    }
+
+    .sort_button_on {
+        background-color: #f39339;
+        border-color: #f39339;
+        color: #fff;
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 100px;
+        font-weight: 700;
+        text-align: center;
+        border: 1px solid #ddd;
+        font-size: 12px;
+    }
+
+    .sort_button {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 100px;
+        font-weight: 700;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #333;
+        font-size: 12px;
+    }
+
+    /*------プロフィールメニューの設定---------*/
+    .profile_menu a {
+        align-items: center;
+        color: rgba(0, 0, 0, 0.87);
+        cursor: pointer;
+        display: flex;
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 4px 16px;
+        font-family: system-ui, BlinkMacSystemFont, -apple-system-subset,
+            Hiragino Kaku Gothic ProN, sans-serif !important;
+    }
+
+    .profile_menu a:hover {
+        background-color: #f2f2f2;
+    }
+
+    .profile_menu_under_bar {
+        background-color: rgba(0, 0, 0, 0.12);
+        border: none;
+        height: 1px;
+        margin: 16px 0;
+    }
+
+    #profile_menu_wrap:not(.display) {
+        display: none;
+    }
+
+    #profile_menu_wrap {
+        background-color: #fff;
+        box-shadow: 0px 1px 4px rgb(0 0 0 / 14%);
+        display: block;
+        min-width: 260px;
+        padding: 16px 0;
+        position: absolute;
+        top: 50px;
+        max-width: calc(100vw - 32px);
+        right: 10px;
+        z-index: 100;
+    }
+
+    #report_menu_wrap:not(.display2) {
+        display: none;
+    }
+
+    #report_menu_wrap {
+        background-color: #fff;
+        box-shadow: 0px 1px 4px rgb(0 0 0 / 14%);
+        display: block;
+        min-width: 260px;
+        padding: 16px 0;
+        position: absolute;
+        top: 200px;
+        max-width: calc(100vw - 32px);
+        right: 10px;
+        z-index: 100;
+    }
+
+    .report_menu button {   
+        align-items: center;
+        color: rgba(0, 0, 0, 0.87);
+        cursor: pointer;
+        display: flex;
+        font-size: 15px;
+        width: 100%;
+        line-height: 1.8;
+        padding: 4px 16px;
+        font-family: system-ui, BlinkMacSystemFont, -apple-system-subset,
+            Hiragino Kaku Gothic ProN, sans-serif !important;
+    }
+
+    .report_menu a {
+        align-items: center;
+        color: rgba(0, 0, 0, 0.87);
+        cursor: pointer;
+        display: flex;
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 4px 16px;
+        font-family: system-ui, BlinkMacSystemFont, -apple-system-subset,
+            Hiragino Kaku Gothic ProN, sans-serif !important;
+    }
+
+    .report_menu a:hover {
+        background-color: #f2f2f2;
+    }
+    /*------通報ボタンの設定------*/
+    .tententen_wrap {
+        margin-top: -4px;
+        margin-left: 10px;
+        font-weight: 900;
+        font-size: 17px;
+    }
+
+    .comment_icon_wrap {
+        margin-left: 10px;
+    }
+    /*-----------下部メニュー設定----------*/
+    .left-menu-wrap{
+        width: 100vw;
+        margin: 15px 0;
+        box-shadow: 0 0 2px 0 rgb(0 0 0 / 20%);
+        background: #fff;
+        font-family: "Yu Gothic Medium",Hiragino Kaku Gothic Pro,"ヒラギノ角ゴ Pro W3",Meiryo,"メイリオ",Meiryo,"メイリオ",Osaka,MS PGothic,arial,helvetica,sans-serif;
+        font-size: 12px;
+    }
+    .left-menu-wrap a{
+        display:block;
+        padding:5px;
+        font-size:12px;
+        color:#1681b2
+    }
+    .left-menu-wrap h2{
+        background:#38434b;
+        color:#fff;
+        font-size:13px;
+        padding:7px 15px;
+        text-align:left
+    }
+    .news {
+        padding: 0.4em 2em;
+        font-weight: bold;
+        border-top: 1px solid #f2f2f2;
+    }
+
+    .news a {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*-------長めのボタン設定-------*/
+    .simple_long_button {
+        display: block;
+        margin: 0 auto;
+        color: rgb(82, 82, 82);
+        text-align: center;
+        border: 1px solid #1a75ff;
+        padding: 10px 10px;
+        font-weight: bold;
+        width: 170px;
+        border-radius: 3px;
+    }
+
+    .simple_long_button_wrap {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /*-----コメント欄設定------*/
+    #new_comment{
+        width: 100%;
+        background-color: white;
+        text-align: center;
+    }
+
+}
+/*-------------アンカー設定------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+.anchor {
+    display: block;
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+#output {
+    margin: 10px;
+}
+
+ /*バリデーションメッセージのcss*/
+.validation {
+    font-size: 0.8rem;
+    color: #FA5C65;
+    margin: 0.3rem;
+}
+
