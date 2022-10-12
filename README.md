@@ -6,13 +6,87 @@ Laravelを用いたブログサイトです．
 
 # function
 
-機能早見表
+## 機能早見表
 
 |  機能 |  説明  | ルーティング |
 | ---- | ---- | ---- |
 |  ブログ作成  |  ブログの作成が可能  | /posts/create |
 |  ブログ編集  | ブログの編集が可能   | /posts/edit/{id} |
-|  ブログ編集  |  |/posts/edit/{id} |
+|  詳細表示  |  ブログの詳細が閲覧可能 | /post/{post} |
+|  プロフィール閲覧 |  プロフィール，ブログ一覧が閲覧可能 | /profile/{id} |
+
+## 仕様説明
+
+まず全体のルーティングは次の通りである
+主にブログの作成や編集，削除には認可制限がかかっており，ログインしていない場合はログインメニューへとミドルウェアにより飛ばされる仕様となっている．
+また，ログイン機能にはlarave/breezeを用いており，ログイン後は元のページへとリダイレクトされるようになっている．
+
+```php
+
+Route::get('/',[PostController::class, 'index'])->name('home');
+//詳細表示
+Route::get('/post/{post}', [PostController::class, 'show']);
+
+Route::get('/search', [PostController::class, 'showComing'])->name('search');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/posts/create', [PostController::class, 'showCreate'])->name('create');
+    //ブログ登録
+    Route::post('/posts/store', [PostController::class, 'exeStore'])->name('store');
+    //ブログ編集
+    Route::get('/posts/edit/{id}', [PostController::class, 'showEdit'])->name('edit');
+    //投稿者情報
+    Route::get('/profile/{id}', [ProfileController::class, 'user_profile'])->name('profile');
+    //更新
+    Route::post('/posts/update', [PostController::class, 'exeUpdate'])->name('update');
+    //ブログ削除
+    Route::post('/posts/delete/{id}', [PostController::class, 'exeDelete'])->name('delete');
+});
+
+require __DIR__.'/auth.php';
+```
+
+## 認可設定
+
+編集や削除などのプログラムは動作前に「ブログの作成者idとログインユーザーのidが一致しているか」を検証し一致していない場合は403(Forbidden)を返すようになっている．
+その他にもbladeの部分で認可設定を行っており，ブログ作成者とログインユーザーが一致しない場合は「編集」「削除」ボタンが表示されないようになっている．
+
+```php
+if(\Auth::user()->id == $post->user_id){
+    Post::destroy($id);
+}else{
+abort(403);
+}
+```
+
+## データ構造・テーブル情報
+
+デフォルトのテーブル以外にpostsテーブルを追加した
+カラムは[id, title, body, user_id, created_at, updated_at]である
+user_idカラムはusersテーブルと紐付いており，紐付いているユーザーが消滅したとき，同時にpostsも削除される．
+
+```php
+Schema::create('posts', function (Blueprint $table) {
+    $table->id();
+    $table->text('title');
+    $table->text('body');
+    $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+    $table->timestamps();
+});
+```
+
+## ブログ作成のバリデーション
+
+ブログのバリデーションは単純でそれぞれrequireを付けている．文字数制限などは設けていない．
+
+```php
+validate([
+    'title' => 'required',
+    'body' => 'required',
+]);
+```
+
+
 
 
 
@@ -25,7 +99,19 @@ Laravelを用いたブログサイトです．
 <img src="https://img.shields.io/badge/-Mysql%20%208.0.30-black.svg?logo=mysql&style=plastic">
 <img src="https://img.shields.io/badge/-Apache%202.4.54-black.svg?logo=apache&style=plastic">
 </div>
-  
+
+ディレクトリ構成図
+
+```
+laravel_docker        
+├─┬ apache/
+│    └── default.conf
+├─┬ php/
+│    └── Dockerfile
+├── mysql/
+├── src/
+└── docker-compose.yml
+```
 
 # Installation
 
