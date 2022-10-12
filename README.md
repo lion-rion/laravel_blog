@@ -10,6 +10,7 @@ Laravelを用いたブログサイトです．
 
 |  機能 |  説明  | ルーティング |
 | ---- | ---- | ---- |
+|  ブログ一覧  |  ブログの一覧が閲覧可能  | / |
 |  ブログ作成  |  ブログの作成が可能  | /posts/create |
 |  ブログ編集  | ブログの編集が可能   | /posts/edit/{id} |
 |  詳細表示  |  ブログの詳細が閲覧可能 | /post/{post} |
@@ -93,7 +94,7 @@ validate([
 # Environment
 
 <div style="display: flex;">
-<img src="https://img.shields.io/badge/-PHP%208.0.23-black.svg?logo=php&style=plastic">
+<img height="80" src="https://img.shields.io/badge/-PHP%208.0.23-black.svg?logo=php&style=plastic">
 <img src="https://img.shields.io/badge/-Laravel%208.33.1-black.svg?logo=laravel&style=plastic">
 <img src="https://img.shields.io/badge/-Docker%2020.10.17-black.svg?logo=docker&style=plastic">
 <img src="https://img.shields.io/badge/-Mysql%20%208.0.30-black.svg?logo=mysql&style=plastic">
