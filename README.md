@@ -87,9 +87,14 @@ validate([
 ]);
 ```
 
+## 実装予定機能
 
+時間の都合上以下の機能については実装を行っておらず「準備中」となっている．
 
-
+1. ユーザーのプロフィール画像機能
+2. コメント機能
+3. 検索機能
+4. タグ機能
 
 # Environment
 
@@ -100,6 +105,8 @@ validate([
 <img height="30" src="https://img.shields.io/badge/-Mysql%20%208.0.30-black.svg?logo=mysql&style=plastic">
 <img height="30" src="https://img.shields.io/badge/-Apache%202.4.54-black.svg?logo=apache&style=plastic">
 </div>
+
+環境にはdockerを採用しており，環境構築もdocker-composeを用いて行っている
 
 ディレクトリ構成図
 
