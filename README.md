@@ -1,10 +1,21 @@
 # Laravel_blog
 
-
 # Features
 
 Laravelを用いたブログサイトです．
- 
+
+# function
+
+機能早見表
+
+|  機能 |  説明  | ルーティング |
+| ---- | ---- | ---- |
+|  ブログ作成  |  ブログの作成が可能  | /posts/create |
+|  ブログ編集  | ブログの編集が可能   | /posts/edit/{id} |
+|  ブログ編集  |  |/posts/edit/{id} |
+
+
+
 # Environment
 
 <div style="display: flex;">
@@ -69,7 +80,7 @@ php artisan migrate
 
 # Ports
 
-|  元Port  |  割当Port  |
+|  元Port  |  割当  |
 | ---- | ---- |
 |  tcp:80  |  8080  |
 |  mysql:3606  |  4306  |
