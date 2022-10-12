@@ -76,7 +76,14 @@ class PostController extends Controller
      //ブログ削除フォームを表示する 引数はid
      public function exeDelete($id){
         $post = Post::find($id);
+        if(\Auth::user()->id == $post->user_id)
+        {
         Post::destroy($id);
+        }
+        else
+        {
+        abort(403);
+        }
         return redirect('/'); 
     }
     public function showComing(){
